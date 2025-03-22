@@ -8,8 +8,8 @@ export default function RosasMessage() {
   const name = searchParams.get("name");
   const message = searchParams.get("message");
   return (
-    <div className="">
-      <div className="absolute top-10 w-[400px] bg-white-700 left-[100px] p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  ">
+    <div className=" w-screen h-screen">
+      <div className="absolute top-10 md:w-[400px] w-full  bg-white-700 md:left-[100px] z-[10000] p-10 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30  ">
         <h1 className="text-4xl font-bold text-white capitalize">
           ¡Hola, {name}!
         </h1>
@@ -18,8 +18,6 @@ export default function RosasMessage() {
         <h1 className="titulo"></h1>
       </div>
       <LyricsSync />
-
-      <script src="../assets/anim.js"></script>
     </div>
   );
 }

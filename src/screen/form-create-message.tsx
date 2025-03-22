@@ -28,10 +28,10 @@ function FormCreateMessage() {
     seturlMessage(url);
   }
 
-  const stylesInput = "border py-2 px-2 w-[400px] border-white rounded-md";
+  const stylesInput = "border py-3 px-3 md:w-[400px] border-white rounded-md";
   return (
-    <main className="w-full h-screen bg-black text-white flex items-center justify-center flex-col">
-      <h3 className="text-3xl font-bold">
+    <main className="w-full h-screen bg-black text-white flex md:items-center justify-center flex-col px-6 md:px-0">
+      <h3 className="text-3xl font-bold text-center">
         Escribe un mensaje lindo para tu pareja
       </h3>
       <section className="mt-10 flex flex-col gap-3">
@@ -60,11 +60,16 @@ function FormCreateMessage() {
       </section>
       <section>
         {urlMessage !== "" && (
-          <div className="flex justify-between">
-            <span>{urlMessage}</span>
+          <div className="flex justify-between gap-5 mt-10">
+            <span className="bg-white text-black p-3 font-semibold rounded-lg w-[300px] truncate">
+              {urlMessage}
+            </span>
             <button
-              className="bg-white w-4"
-              onClick={() => navigator.clipboard.writeText(urlMessage)}
+              className="bg-white  px-3 rounded-2xl text-black uppercase cursor-pointer"
+              onClick={() => {
+                navigator.clipboard.writeText(urlMessage);
+                alert("Mensaje copiado al portapapeles");
+              }}
             >
               Copiar
             </button>

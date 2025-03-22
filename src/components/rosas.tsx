@@ -1,6 +1,6 @@
 export default function FlowerScene() {
   return (
-    <main className="w-fit h-fit bg-yellow-300">
+    <main className="section-main">
       <div className="night"></div>
       <div className="flowers">
         <div className="flower flower--1">
